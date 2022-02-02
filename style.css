@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+* {
+    box-sizing: border-box;
+    /* TODO LO QUE SE AGREGA NO SUMA EN EL ANCHO */
+}
+
+body {
+    margin: 0;
+    /* designar una fuente general para todo el 
+    documento */
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+header {
+    background-color: aquamarine;
+    height: 140px;
+    padding-top: 10px;
+}
+
+/* todo lo que esta dentro de header o sea los 
+hijos, (header *) ocupen lo menos posible
+herencia: todos (*) heredan el padre (header) */
+header * {
+    display: inline;
+    /* corta el color de fondo por 
+    ocupar lo minimo */
+    /* background-color: gray; */
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    /* sacar el subrayado del link y el color de link */
+    text-decoration: none;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+.logo {
+    margin: 20px;
+    /* font-size: tamaño px;
+    font-weight: grosor de normal a negrita;
+    font-style: italica, normal, oblicua, etc; */
+    font-family: 'Italianno', cursive;
+    font-size: 80px;
+    /* font-weight: bold; */
+
+}
+
+main {
+/* cubre todo el area designada a 
+    sectionOne */
+    display:grid;   
+}
+#sectionHome {
+    background-color: rgb(27, 95, 184);
+}
+
+
+#sectionAbout {
+    background-color: rgb(16, 65, 172);
+}
+
+#sectionBlog {
+    background-color: rgb(14, 48, 117);    
+}
+
+#sectionNews {
+    background-color: rgb(8, 27, 68);    
+}
+
+#sectionContact {
+    background-color: rgb(4, 13, 31);        
+}
+
+section {
+    color: wheat;
+}
+
+section h2 {
+    /* designar una fuente en particular  en
+    h2 hija de section*/
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* toda la fuente para todo (*, body, o alguna
+etiqueta padre, las funestes especificadas
+en las etiquetas designadas) */
+
+p {
+    /* text-align: left; */
+    /* text-indent: 15px; */
+    /* ancho del 98% del tamaño de la pantalla (widescreen) */
+    width: 98%;
+    /* margen de 0 arr y aba; con un margen izq y der automático
+    o sea que el auto me dice que va a calcular solo los margenes 
+    izq y der */
+    margin: 0 auto;
+}
+
+/* letra capital */
+p::first-letter {
+    /* em tamaño de la altura en renglones */
+    font-size: 3em;
+
+    /* Unitless values: usa esta cifra multiplicada por el tamaño de 
+    fuente del elemento */
+    line-height: 1.31em;
+
+    /* margen izquierdo de la primera letra */
+    /* margin: 5px; */
+    text-align: left;
+    float:left;
+    padding-right: 2px;
+    margin-right: 5px;
+}
+
+/* Keyword value */
+/* line-height: normal; */
+
+
+/* line-height: 3.5; */
+
+/* <longitud> valores */
+/* line-height: 3em; */
+
+/* <porcentaje> valores */
+/* line-height: 34%; */
+
+/* Valores absolutos */
+/* line-height: inherit;
+line-height: initial;
+line-height: unset; */
