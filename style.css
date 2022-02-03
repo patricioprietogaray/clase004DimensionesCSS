@@ -107,7 +107,10 @@ p {
 }
 
 /* letra capital */
-p::first-letter {
+/* p::first-letter #capital  */
+
+/* p::first-letter, #capital { */
+#capital::first-letter {
     /* em tamaño de la altura en renglones */
     font-size: 3em;
 
