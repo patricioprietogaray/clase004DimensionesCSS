@@ -6,7 +6,7 @@
 }
 
 body {
-    margin: 0;
+    margin-top: 0px;
     /* designar una fuente general para todo el 
     documento */
     font-family: 'Playfair Display', serif;
@@ -17,6 +17,10 @@ header {
     background-color: aquamarine;
     height: 140px;
     padding-top: 10px;
+    /* permite mantener fijo el menu con fixed */
+    position: fixed;
+    width: 100%;
+
 }
 
 /* todo lo que esta dentro de header o sea los 
@@ -57,8 +61,32 @@ main {
     sectionOne */
     display:grid;   
 }
+
+
 #sectionHome {
     background-color: rgb(27, 95, 184);
+
+    /* imagen de fondo */
+    background-image: url(./assets/img/Untitled.png);
+    /* background-size: auto; */
+    /* scroll-behavior: auto; */
+    /* background-blend-mode: color-burn; */
+    /* repetir o no la imagen  */
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* contain es para ajustar la imagen de manera que 
+    se vea completa , cover es para ajustarla al ancho
+    manteniendo proporcion*/
+
+    background-size: cover;
+    color: white;
+    /* z-index: ; */
+    /* position: sticky; */
+
+/* bajar todas las seccines para dar lugar al menu
+    de arriba y dejarlo fijo con una altura de 140px */
+    margin-top: 140px;
+
 }
 
 
@@ -80,6 +108,7 @@ main {
 
 section {
     color: wheat;
+    
 }
 
 section h2 {
