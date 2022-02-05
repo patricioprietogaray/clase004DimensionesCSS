@@ -19,7 +19,10 @@ body {
 }
 
 header {
-    background-color: aquamarine;
+    /* usar rgb no los colores predeterminados de css
+    que los termina eligiendo el navegador y terminan 
+    poniendo otro color distinto al que se eligió */
+    background-color: rgb(123, 248, 206);
     height: 140px;
     padding-top: 10px;
     /* permite mantener fijo el menu con fixed */
@@ -45,7 +48,8 @@ li {
 a {
     /* sacar el subrayado del link y el color de link */
     text-decoration: none;
-    color: black;
+    color:rgb(0, 0, 0);
+    /* color: black; */
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
 }
@@ -85,7 +89,7 @@ main {
     manteniendo proporcion*/
 
     background-size: cover;
-    color: white;
+    color: rgb(255, 255, 255);
     /* z-index: ; */
     /* position: sticky; */
 
@@ -113,7 +117,7 @@ main {
 }
 
 section {
-    color: wheat;
+    color: rgb(247, 223, 179);
     
 }
 
@@ -123,7 +127,7 @@ section h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* toda la fuente para todo (*, body, o alguna
