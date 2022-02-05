@@ -90,6 +90,9 @@ main {
 
     background-size: cover;
     color: rgb(255, 255, 255);
+    /* con sticky + position fixed se situa el objeto por encima de todo
+    mientras que con z-index se puede acomodar que ira adelante
+    y que atras mas valor adelante, menos atras (siempre en comparacion de otro) */
     /* z-index: ; */
     /* position: sticky; */
 
