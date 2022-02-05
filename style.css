@@ -23,7 +23,7 @@ header {
     que los termina eligiendo el navegador y terminan 
     poniendo otro color distinto al que se eligió */
     background-color: rgb(123, 248, 206);
-    height: 140px;
+    height: 100px;
     padding-top: 10px;
     /* permite mantener fijo el menu con fixed */
     position: fixed;
@@ -43,6 +43,11 @@ header * {
 
 li {
     margin: 10px;
+    /* margen interno del objeto al contenedor */
+    padding: 10px;
+    /*forma de boton  bordes redondeados*/
+    border-radius: 40px;
+    /* background-color: rgb(252, 252, 252); */
 }
 
 a {
@@ -54,6 +59,19 @@ a {
     font-size: 25px;
 }
 
+/* cuando posiciono el mouse sobre el boton del menu */
+a:hover {
+    /* color de fondo */
+    background-color: rgb(35, 177, 130);
+    border-radius: 20px;
+    /* bordes internos del boton arriba y abajo con 5  y der e izq con 10 */
+    padding: 5px 10px; 
+    margin: -10px;
+
+    /* hacer una transicion para que aparezca el boton */
+    transition: 0.3s;
+
+}
 
 .logo {
     margin: 20px;
@@ -184,3 +202,75 @@ p {
 /* line-height: inherit;
 line-height: initial;
 line-height: unset; */
+
+/* todos los menues */
+.menues {
+    /* menu padre posicion relativa */
+    /* position: relative; */
+    /* display: none; */
+} 
+
+/* sub menú en Home */
+.subMenuHome {
+      /* para que desaparezca el submenu */
+      /* display: none; */
+    /* .subMenuAbout { */
+    /* para sacarlo de la linea por el display: inline 
+    (quedan en linea pero en otra linea) */
+    
+    /* menu hijo posicion absoluta */
+    position: absolute;
+    /* para ponerlo en otra linea */
+    display: flex;
+    /* para ponerlo uno debajo de otro se usa la opcion column (columna)
+    row (fila) */
+    flex-direction: row;
+    background-color:rgba(35, 177, 130), 0.7;
+    
+    /* rgba(82, 27, 57, 0.7); */
+    margin-left: 220px;
+    /* margin-top: -30px; */
+    /* padding: 5px 10px; */
+    /* border-radius: 40px; */
+
+  
+}
+
+menues:active {
+    display: none;
+}
+
+/* para que aparezca el submenu de home 
+en el hover de menues (padre) aplico los cambios en subMenuHome*/
+/* .menues:hover .subMenuHome {  */
+/* .subMenuAbout { */
+
+
+    /* display: none; */
+    /* para ponerlo en otra linea */
+    /* display: flex; */
+    /* para ponerlo uno debajo de otro se usa la opcion column (columna)
+    row (fila) */
+    /* flex-direction: row; */
+    /* background-color:rgba(35, 177, 130), 0.7; */
+    
+    /* rgba(82, 27, 57, 0.7); */
+    /* margin-left: 220px; */
+    /* margin-top: -30px; */
+    /* padding: 5px 10px; */
+    /* border-radius: 40px; */
+}
+
+/* .menues:hover .subMenuAbout {} */
+
+
+/* .subMenuHome::before {
+    display: none;
+} */
+
+/* 
+.subMenuHome:hover {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(35, 177, 130), 0.7;
+} */
