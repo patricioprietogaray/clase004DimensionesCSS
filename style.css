@@ -144,7 +144,7 @@ p {
     width: 98%;
     /* margen de 0 arr y aba; con un margen izq y der automático
     o sea que el auto me dice que va a calcular solo los margenes 
-    izq y der */
+    izq y der, CENTRAR EL OBJETO PEGADO AL MARGIN-TOP DEL CONTENEDOR */
     margin: 0 auto;
 }
 
