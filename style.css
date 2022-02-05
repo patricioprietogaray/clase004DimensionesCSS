@@ -5,6 +5,11 @@
     /* TODO LO QUE SE AGREGA NO SUMA EN EL ANCHO */
 }
 
+html {
+    /* desplaza la pagina de forma suave */
+    scroll-behavior: smooth;
+}
+
 body {
     margin-top: 0px;
     /* designar una fuente general para todo el 
@@ -44,6 +49,7 @@ a {
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
 }
+
 
 .logo {
     margin: 20px;
@@ -89,9 +95,9 @@ main {
 
 }
 
-
 #sectionAbout {
     background-color: rgb(16, 65, 172);
+
 }
 
 #sectionBlog {
