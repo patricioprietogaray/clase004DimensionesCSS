@@ -10,6 +10,7 @@
 html {
     /* desplaza la pagina de forma suave */
     scroll-behavior: smooth;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 body {
@@ -276,4 +277,12 @@ footer > h2 {
 footer > h3 {
     text-align: right;
     font-family: 'Dancing Script';
+}
+
+img {
+    float: right;
+}
+
+img:hover {
+    color: aqua;
 }
