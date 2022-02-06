@@ -3,6 +3,8 @@
 * {
     box-sizing: border-box;
     /* TODO LO QUE SE AGREGA NO SUMA EN EL ANCHO */
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -41,49 +43,6 @@ header * {
     /* background-color: gray; */
 }
 
-li {
-    margin: 10px;
-    /* margen interno del objeto al contenedor */
-    padding: 10px;
-    /*forma de boton  bordes redondeados*/
-    border-radius: 40px;
-    /* background-color: rgb(252, 252, 252); */
-}
-
-a {
-    /* sacar el subrayado del link y el color de link */
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-    /* color: black; */
-    font-family: 'Dancing Script', cursive;
-    font-size: 25px;
-}
-
-/* cuando posiciono el mouse sobre el boton del menu */
-a:hover {
-    /* color de fondo */
-    background-color: rgb(35, 177, 130);
-    border-radius: 20px;
-    /* bordes internos del boton arriba y abajo con 5  y der e izq con 10 */
-    padding: 5px 10px; 
-    margin: -10px;
-
-    /* hacer una transicion para que aparezca el boton */
-    transition: 0.3s;
-
-}
-
-.logo {
-    margin: 20px;
-    /* font-size: tamaño px;
-    font-weight: grosor de normal a negrita;
-    font-style: italica, normal, oblicua, etc; */
-    font-family: 'Italianno', cursive;
-    font-size: 80px;
-    /* font-weight: bold; */
-
-}
-
 main {
 /* cubre todo el area designada a 
     sectionOne */
@@ -95,13 +54,15 @@ main {
     background-color: rgb(27, 95, 184);
 
     /* imagen de fondo */
-    background-image: url(./assets/img/Untitled.png);
+    /* background-image: url(./assets/img/Untitled.png); */
+    
     /* background-size: auto; */
     /* scroll-behavior: auto; */
     /* background-blend-mode: color-burn; */
     /* repetir o no la imagen  */
     /* background-repeat: no-repeat; */
-    background-position: center;
+    
+    /* background-position: center; */
     /* contain es para ajustar la imagen de manera que 
     se vea completa , cover es para ajustarla al ancho
     manteniendo proporcion*/
@@ -120,21 +81,22 @@ main {
 
 }
 
-#sectionAbout {
-    background-color: rgb(16, 65, 172);
 
-}
 
 #sectionBlog {
-    background-color: rgb(14, 48, 117);    
+    background-color: rgb(16, 65, 172);
 }
 
 #sectionNews {
-    background-color: rgb(8, 27, 68);    
+    background-color: rgb(14, 48, 117);
 }
 
 #sectionContact {
-    background-color: rgb(4, 13, 31);        
+    background-color: rgb(8, 27, 68);       
+}
+
+#sectionAbout {
+    background-color: rgb(4, 13, 31);
 }
 
 section {
@@ -147,8 +109,18 @@ section h2 {
     h2 hija de section*/
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
+    font-weight: 800;
     text-align: center;
     color: rgb(255, 255, 255);
+}
+
+section h3 {
+    /* designar una fuente en particular  en
+    h2 hija de section*/
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(106, 211, 171);
 }
 
 /* toda la fuente para todo (*, body, o alguna
@@ -203,74 +175,105 @@ p {
 line-height: initial;
 line-height: unset; */
 
-/* todos los menues */
-.menues {
-    /* menu padre posicion relativa */
-    /* position: relative; */
-    /* display: none; */
-} 
+/* estilo del menu */
 
-/* sub menú en Home */
-.subMenuHome {
-      /* para que desaparezca el submenu */
-      /* display: none; */
-    /* .subMenuAbout { */
-    /* para sacarlo de la linea por el display: inline 
-    (quedan en linea pero en otra linea) */
-    
-    /* menu hijo posicion absoluta */
+ul {
+    list-style: none;
+}
+
+.menuPrincipal > li > a {
+    background-color: #100dd6;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* para respetar las dimensiones de los objetos y que no se 
+    peguen unos con otros */
+    display: block;
+    min-width: 150px;
+    transition: 1s;
+}
+
+li > a {
+    background-color: #02011a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    /* para respetar las dimensiones de los objetos y que no se 
+    peguen unos con otros */
+    display: block;
+    min-width: 150px;
+    transition: 1s;
+}
+
+
+/* cambio de color cuando el mouse se encuentra sobre el item
+del menu */
+.menuPrincipal li a:hover {
+    background-color: #1b195f;
+    transition: .4s;
+}
+
+/* acomodar los li del primer nivel (home, blog, news, 
+contact y about us) */
+/* .menuPrincipal > li quiere decir hijos directos (li) de su 
+padre (menuPrincipal) */
+.menuPrincipal > li {
+    margin-top: 45px;
+    text-align: center;
+    float: left;
+}
+
+
+.logo {
+    margin: 20px;
+    /* font-size: tamaño px;
+    font-weight: grosor de normal a negrita;
+    font-style: italica, normal, oblicua, etc; */
+    font-family: 'Italianno', cursive;
+    font-size: 80px;
+    /* font-weight: bold; */
+    float: left;
+}
+
+/* para que los submenu desaparezcan 
+o sea todos los ul que estan dentro de los li*/
+.menuPrincipal li ul {
+    display: none;
+    /* para acomodar los submenues con respecto al menu principal */
     position: absolute;
-    /* para ponerlo en otra linea */
-    display: flex;
-    /* para ponerlo uno debajo de otro se usa la opcion column (columna)
-    row (fila) */
-    flex-direction: row;
-    background-color:rgba(35, 177, 130), 0.7;
-    
-    /* rgba(82, 27, 57, 0.7); */
-    margin-left: 220px;
-    /* margin-top: -30px; */
-    /* padding: 5px 10px; */
-    /* border-radius: 40px; */
-
-  
+    /* configurar el ancho de los submenues */
+    min-width: 130px;
 }
 
-menues:active {
-    display: none;
+/* cuando se pase el mouse sobre li de menuprincipal aparecen
+los items (ul) del menu que pertenezcan a ese li */
+.menuPrincipal li:hover > ul {
+    display: block;
 }
 
-/* para que aparezca el submenu de home 
-en el hover de menues (padre) aplico los cambios en subMenuHome*/
-/* .menues:hover .subMenuHome {  */
-/* .subMenuAbout { */
-
-
-    /* display: none; */
-    /* para ponerlo en otra linea */
-    /* display: flex; */
-    /* para ponerlo uno debajo de otro se usa la opcion column (columna)
-    row (fila) */
-    /* flex-direction: row; */
-    /* background-color:rgba(35, 177, 130), 0.7; */
-    
-    /* rgba(82, 27, 57, 0.7); */
-    /* margin-left: 220px; */
-    /* margin-top: -30px; */
-    /* padding: 5px 10px; */
-    /* border-radius: 40px; */
+/* configurando todos los li de segundo nivel */
+.menuPrincipal li ul li {
+    /* configurar y no mostrar como relativo los 
+    submenues (secundarios) al lado del submenu */
+    position: relative;
 }
 
-/* .menues:hover .subMenuAbout {} */
+.menuPrincipal li ul li ul {
+    right: -225px;
+    top:0;
+}
 
+footer {
+    background-color: #000000;
+    color: #ffffff;
+}
 
-/* .subMenuHome::before {
-    display: none;
-} */
+footer > h2 {
+    text-align: center;
+    font-family: 'Dancing Script';
+}
 
-/* 
-.subMenuHome:hover {
-    display: flex;
-    flex-direction: column;
-    background-color:rgba(35, 177, 130), 0.7;
-} */
+footer > h3 {
+    text-align: right;
+    font-family: 'Dancing Script';
+}
